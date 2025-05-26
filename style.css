@@ -55,10 +55,28 @@ main {
 }
 
 .section__container {
+    isolation: isolate;
+    position: relative;
     padding: 124px 24px;
 }
 
+.section__top-decoration {
+    position: absolute;
+    top: 0;
+    left: -8rem;
+    z-index: 1;
+}
+
+.section__bottom-decoration {
+    position: absolute;
+    z-index: 1;
+    bottom: 0rem;
+    right: -12rem;
+}
+
 .section__wrapper  {
+    position: relative;
+    z-index: 10;
     max-width: 69.375rem;
     margin: 0 auto;
 }
@@ -117,6 +135,14 @@ main {
     border-radius: 12px;
     padding: 32px;
     max-width: 350px;
+}
+
+.section__card:nth-child(2) {
+    margin-top: 1rem;
+}
+
+.section__card:nth-child(3) {
+    margin-top: 2rem;
 }
 
 .section__avatar-container {
@@ -198,7 +224,7 @@ main {
     .section__item.section__item {
         margin: 0 auto 1rem;
     }
-    .section__card {
+    .section__card.section__card {
         margin: 0 auto;
     }
     main{
